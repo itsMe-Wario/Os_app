@@ -1,0 +1,247 @@
+/* Reset some default styles */
+body, h1, h2, h3, p, ul, li, iframe, img, video {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Set a black and white theme */
+  body {
+    background-color: #fff;
+    color: #000;
+    font-family: "Courier New", Courier, monospace;
+    line-height: 1.6;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+  }
+  
+  /* Style the left index */
+  #index {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #000;
+    color: #fff;
+    padding: 10px;
+    width: 250px; /* Adjust the width as needed */
+    height: 100%;
+    overflow: auto;
+  }
+  
+  #index ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  #index ul li {
+    margin-bottom: 10px;
+  }
+  
+  #index a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2em;
+  }
+  
+  #index a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Center the header and main content */
+  header, main {
+    text-align: center;
+    margin: 0 auto;
+  }
+  
+  /* Style the header */
+  header {
+    background-color: #fff;
+    color: #000;
+    padding: 20px;
+    width: calc(100% - 220px); /* Adjust the width as needed */
+    margin-left: 120px; /* Adjust the margin to make space for the index */
+  }
+  
+  /* Style main content sections */
+  main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    margin-left: 500px; /* Adjust the margin to move the sections more to the right */
+  }
+  
+  /* Style sections */
+  section {
+    margin: 0 auto 40px; /* Center-align sections and add space at the bottom */
+    background-color: #fff;
+    border: 1px solid #000;
+    padding: 20px;
+    border-radius: 5px;
+    transition: transform 0.2s; /* Add a transform transition for the pop effect */
+  }
+  
+  /* Add a hover effect for sections */
+  section:hover {
+    transform: scale(1.05); /* Increase size on hover */
+  }
+  
+  /* Style links */
+  a {
+    color: #000;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Style projects */
+  .project {
+    background-color: #fff;
+    border: 1px solid #000;
+    border-radius: 5px;
+    padding: 20px;
+  }
+  
+  .project h3 {
+    color: #000;
+    font-size: 1.5em;
+  }
+  
+  .project p {
+    margin: 10px 0;
+  }
+  
+  /* Style GPA */
+  #GPA .project {
+    background-color: #f0f0f0;
+  }
+  
+  /* Style coding components */
+  #Coading .project {
+    background-color: #f0f0f0;
+  }
+  
+  /* Style videos */
+  video {
+    max-width: 100%;
+    height: auto;
+    display: block; /* Center-align videos */
+    margin: 0 auto; /* Center-align videos */
+    margin-bottom: 20px; /* Add a gap between videos */
+  }
+  
+  /* Center-align photos */
+  img {
+    display: block; /* Center-align images */
+    margin: 0 auto; /* Center-align images */
+    margin-bottom: 20px; /* Add a gap between photos */
+  }
+  
+  /* Style the Club Work section */
+  #ESR {
+    margin-left: 0;
+  }
+  
+  /* Style the Club Work project */
+  #ESR .project {
+    background-color: #fff;
+    border: 1px solid #000;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 40px; /* Add a gap between Club Work projects */
+  }
+  
+  /* Style the Club Work video and images */
+  #ESR img,
+  #ESR video {
+    display: block; /* Center-align images and videos within Club Work */
+    margin: 0 auto; /* Center-align images and videos within Club Work */
+    margin-bottom: 20px; /* Add a gap between images and videos within Club Work */
+  }
+  
+  /* Style footer */
+  footer {
+    background-color: #fff;
+    color: #000;
+    text-align: center;
+    padding: 10px 0;
+  }
+  
+  /* Interactive elements */
+  a.button {
+    display: inline-block;
+    background-color: #000;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    margin: 10px 0;
+  }
+  
+  a.button:hover {
+    background-color: #333;
+  }
+  
+  /* Responsive design for smaller screens */
+  @media (max-width: 768px) {
+    main {
+      margin-left: 0;
+      padding: 10px;
+    }
+  }
+  
+  /* Clean and consistent design for lists and lists inside paragraphs */
+  ul, ol {
+    list-style: disc;
+    margin-left: 20px;
+  }
+  
+  /* Clean up the list layout inside paragraphs */
+  li {
+    margin: 5px 0;
+  }
+
+  #contact-heading {
+    background-color: #fff;
+    color: black;
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #000;
+    border-radius: 5px;
+    margin-top: 150px;
+    font-size: 14px;
+  }
+
+  #contact-heading_a {
+    background-color: #fff;
+    color: black;
+    padding: 1px;
+    text-align: center;
+    border: 1px solid #000;
+    border-radius: 5px;
+    margin-top: 10px;
+    font-size: 14px;
+  }
+
+  /* Your existing CSS styles */
+
+/* Style for the animated heading */
+  #header.animation {
+   position: fixed;
+   top: 20px;
+   right: 20px; /* Adjust this value to control the initial position */
+   background-color: #fff;
+   padding: 10px;
+   border: 1px solid #000;
+   border-radius: 5px;
+   z-index: 999;
+   transition: all 0.5s; 
+  }
+
+  #header.animation h1 {
+   margin: 0;
+  }
