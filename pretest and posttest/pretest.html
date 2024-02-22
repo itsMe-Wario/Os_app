@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="dpp-pretest">
+        <h1>Dining Philosopher Problem</h1>
+        <div class="difficulty">
+          <label for="difficulty-beginner">Beginner</label>
+          <input type="checkbox" id="difficulty-beginner" name="difficulty" checked>
+          <label for="difficulty-advanced">Advanced</label>
+          <input type="checkbox" id="difficulty-advanced" name="difficulty">
+        </div>
+        <div class="pretest-question1">
+        <p>1. What is the Dining Philosophers problem?</p>
+        <div class="answers">
+          <label for="answer-a1">
+            <input type="radio" id="answer-a1" name="answer" value="pretest-1a">
+            a. A problem in ethics about philosophers debating at a dining table
+          </label> <br>
+          <label for="answer-b1">
+            <input type="radio" id="answer-b1" name="answer" value="pretest-1b">
+            b. A concurrency problem involving resource sharing among philosophers
+          </label> <br>
+          <label for="answer-c1">
+            <input type="radio" id="answer-c1" name="answer" value="pretest-1c">
+            c. A scheduling problem in operating systems
+          </label> <br>
+          <label for="answer-d1">
+            <input type="radio" id="answer-d1" name="answer" value="pretest-1d">
+            d. A problem in artificial intelligence involving decision-making by philosophers
+          </label> <br>
+        </div>
+    </div>
+    <div class="pretest-question2">
+        <p>2. How many philosophers and forks are typically involved in the classic Dining Philosophers problem?</p>
+        <div class="answers">
+          <label for="answer-a">
+            <input type="radio" id="answer-a" name="answer" value="pretest-2a">
+            a. 3 philosophers and 3 forks
+          </label> <br>
+          <label for="answer-b">
+            <input type="radio" id="answer-b" name="answer" value="pretest-2b">
+            b. 4 philosophers and 4 forks
+          </label> <br>
+          <label for="answer-c">
+            <input type="radio" id="answer-c" name="answer" value="pretest-2c">
+            c. 5 philosophers and 5 forks
+          </label> <br>
+          <label for="answer-d">
+            <input type="radio" id="answer-d" name="answer" value="pretest-2d">
+            d. 6 philosophers and 6 forks
+          </label> <br>
+        </div>
+    </div>
+    <div class="pretest-question3">
+        <p>3. What is the primary challenge in the Dining Philosophers problem?</p>
+        <div class="answers">
+          <label for="answer-a">
+            <input type="radio" id="answer-a" name="answer" value="pretest-3a">
+            a. Ensuring philosophers get enough food
+          </label> <br>
+          <label for="answer-b">
+            <input type="radio" id="answer-b" name="answer" value="pretest-3b">
+            b. Preventing deadlock and avoiding resource contention
+          </label> <br>
+          <label for="answer-c">
+            <input type="radio" id="answer-c" name="answer" value="pretest-3c">
+            c. Ensuring philosophers share their thoughts
+          </label> <br>
+          <label for="answer-d">
+            <input type="radio" id="answer-d" name="answer" value="pretest-3d">
+            d. Maximizing the speed of philosophers' decision-making
+          </label> <br>
+        </div>
+    </div>
+    <div class="pretest-question4">
+        <p>4. Which synchronization mechanism is commonly used to solve the Dining Philosophers problem?</p>
+        <div class="answers">
+          <label for="answer-a">
+            <input type="radio" id="answer-a" name="answer" value="pretest-4a">
+            a. Mutex locks
+          </label> <br>
+          <label for="answer-b">
+            <input type="radio" id="answer-b" name="answer" value="pretest-4b">
+            b. Semaphores
+          </label> <br>
+          <label for="answer-c">
+            <input type="radio" id="answer-c" name="answer" value="pretest-4c">
+            c. Spinlocks
+          </label> <br>
+          <label for="answer-d">
+            <input type="radio" id="answer-d" name="answer" value="pretest-4d">
+            d. Both a and b
+          </label> <br>
+        </div>
+    </div>
+    <div class="pretest-question4">
+        <p>5. What is the purpose of using a semaphore or mutex lock in the Dining Philosophers solution?</p>
+        <div class="answers">
+          <label for="answer-a">
+            <input type="radio" id="answer-a" name="answer" value="pretest-4a">
+            a. To increase the speed of philosophers' decision-making
+          </label> <br>
+          <label for="answer-b">
+            <input type="radio" id="answer-b" name="answer" value="pretest-4b">
+            b. To prevent philosophers from eating concurrently and avoid conflicts
+          </label> <br>
+          <label for="answer-c">
+            <input type="radio" id="answer-c" name="answer" value="pretest-4c">
+            c. To allow philosophers to access shared resources simultaneously
+          </label> <br>
+          <label for="answer-d">
+            <input type="radio" id="answer-d" name="answer" value="pretest-4d">
+            d. To limit the number of thoughts a philosopher can have at a time
+          </label> <br>
+        </div>
+    </div><br><br>
+    <button type="button" id="submit-button">Submit Quiz</button>
+    <div id="result-container"></div>
+
+      </div>
+      <script>
+        const correctAnswers = ["a", "a", "a", "a", "a"];
+        document.getElementById("submit-button").addEventListener("click", function() {
+  // Calculate score
+  let score = 0;
+  const answerInputs = document.querySelectorAll('input[type="radio"]:checked');
+  for (let i = 0; i < answerInputs.length; i++) {
+    if (answerInputs[i].value === correctAnswers[i]) {
+      score++;
+    }
+  }
+
+  // Display results
+  const resultContainer = document.getElementById("result-container");
+  resultContainer.textContent = `Your score is: ${score} out of 5`;
+});
+
+      </script>
+</body>
+</html>
+  
