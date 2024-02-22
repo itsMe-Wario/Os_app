@@ -1,10 +1,10 @@
-/* Reset some default styles */
+
 body, h1, h2, h3, p, ul, li, iframe, img, video {
     margin: 0;
     padding: 0;
   }
   
-  /* Set a black and white theme */
+
   body {
     background-color: #fff;
     color: #000;
@@ -17,15 +17,15 @@ body, h1, h2, h3, p, ul, li, iframe, img, video {
     margin: 0;
   }
   
-  /* Style the left index */
+ 
   #index {
     position: fixed;
     top: 0;
     left: 0;
-    background-color: #000;
+    background-color: #331A53;
     color: #fff;
     padding: 10px;
-    width: 250px; /* Adjust the width as needed */
+    width: 250px; 
     height: 100%;
     overflow: auto;
   }
@@ -58,7 +58,7 @@ body, h1, h2, h3, p, ul, li, iframe, img, video {
   /* Style the header */
   header {
     background-color: #fff;
-    color: #000;
+    color: #7F4EBD;
     padding: 20px;
     width: calc(100% - 220px); /* Adjust the width as needed */
     margin-left: 120px; /* Adjust the margin to make space for the index */
@@ -106,7 +106,7 @@ body, h1, h2, h3, p, ul, li, iframe, img, video {
   }
   
   .project h3 {
-    color: #000;
+    color: #331A53;
     font-size: 1.5em;
   }
   
@@ -245,3 +245,25 @@ body, h1, h2, h3, p, ul, li, iframe, img, video {
   #header.animation h1 {
    margin: 0;
   }
+
+  #pretest{
+    text-align: left;
+  }
+
+  p{
+    text-align: justify;
+  }
+
+  #original-video{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  #quiz{
+    text-align: left;
+  }
+
+
