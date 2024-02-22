@@ -16,7 +16,7 @@
                 <li><a href="#recap">Recap</a></li>
                 <li><a href="#pretest">Pretest</a></li>
                 <li><a href="#concept">Concept</a></li>
-                <li><a href="#demo">Demo</a></li>
+                <li><a href="#demo">Demo of a deadlock</a></li>
                 <li><a href="#practice">Practice</a></li>
                 <li><a href="#quiz">Post Quiz</a></li>
                 <li id="contact-heading">Made by: <br> SRM Institute of Science and Technology </li>
@@ -33,26 +33,63 @@
 
         <section id="aim">
             <h2>Aim:</h2>
-            <ul>
+            
             <p>
                 AIM of project:
                 <br>
-                <li><a href="">Link</a></li>
-                <li><a href="">Link</a></li>
+                To understand the Dining Philosopers Problem and its application in Operating System
             </p>
-            </ul>
+            
         </section>
 
         <section id="overview">
             <h2>Overview:</h2>
             <div class="project">
-                <h3>Second Heading  </h3>
-                <p>text</p>
+                <h3>What is Dining Philosophers Problem?</h3>
+                <p>The dining philosopher's problem is the classical problem of synchronization which says that Five philosophers are sitting around a
+                    circular table and their job is to think and eat alternatively. A bowl of noodles is placed at the center of the table along with 
+                    five forks for each of the philosophers. To eat a philosopher needs both their right and a left fork. 
+                    A philosopher can only eat if both immediate left and right forks of the philosopher is available. In case if
+                    both immediate left and right forks of the philosopher are not available then the philosopher puts down their 
+                    (either left or right) fork and starts thinking again.
+                    <br><br>
+
+                    The dining philosopher demonstrates a large class of concurrency control problems hence it's a classic synchronization problem. In
+                    general we commonly use Semaphores and Mutex Locks as the synchronization mechanism. For this instance, we will only be using 
+                    semaphore.
+                </p>
                 <br>
             </div>
             <div class="project">
-                <h3>Third Heading</h3>
-                <p>Text</p>
+                <h3>What is a Semaphore?</h3>
+                <p>In the Dining Philosophers problem, 
+                    a semaphore is a synchronization tool 
+                    that helps manage access to shared resources, 
+                    such as forks. It prevents conflicts by 
+                    allowing philosophers to check and update the 
+                    availability of forks before picking them 
+                    up to eat. Semaphores play a crucial role in 
+                    avoiding deadlock and ensuring orderly 
+                    resource usage in a concurrent dining scenario. 
+                    For this problem, we will be using binary semaphore 
+                    which means that there can be only two answers that is
+                    True (1) or False (0).</p>
+                <br>
+            </div>
+            <div class="project">
+                <h3>What is a deadlock and why is it important to remove?</h3>
+                <p>A deadlock in concurrent programming happens when
+                    multiple processes are stuck in a cycle of 
+                    waiting for each other to release resources, 
+                    leading to a complete standstill. It is 
+                    important to remove deadlocks because they 
+                    result in unresponsive systems, decreased 
+                    performance, and a failure to accomplish tasks. 
+                    Deadlocks hinder the efficiency of concurrent 
+                    systems, making it crucial to employ techniques 
+                    like careful resource allocation and deadlock 
+                    detection to prevent or resolve these situations 
+                    and maintain overall system functionality.</p>
                 <br>
             </div>
         </section>
@@ -60,58 +97,111 @@
         <section id="recap">
             <h2>Recap:</h2>
             <div class="project">
-                <p>text</p>
+                <p>From the explanation we understand the importance of dining philosopher problem. We also understand
+                    the importance of a semaphore to avoid any deadlocks. Now, we will understand about dining philosopher 
+                    problem through some videos.
+                </p>
             </div>
         </section>
 
         <section id="pretest">
             <h2>Pretest:</h2>
             <div class="project">
-                <h3>Title</h3>
                 <br>
-                <p>text</p>
-                <br>
+                <p>1. What is the Dining Philosophers problem? <br>
+                    <ol>
+                        <li>a. A problem in ethics about philosophers debating at a dining table</li>
+                        <li>b. A concurrency problem involving resource sharing among philosophers</li>
+                        <li>c. A scheduling problem in operating systems</li>
+                        <li>d. A problem in artificial intelligence involving decision-making by philosophers</li>
+                    </ol>
+                    2. How many philosophers and forks are typically involved in the classic Dining Philosophers problem?
+                    <ol>
+                        <li>a. 3 philosophers and 3 forks</li>
+                        <li>b. 4 philosophers and 4 forks</li>
+                        <li>c. 5 philosophers and 5 forks</li>
+                        <li>d. 6 philosophers and 6 forks</li>
+                    </ol>
+
+                    3. What is the primary challenge in the Dining Philosophers problem?
+                    <ol>
+                        <li>a. Ensuring philosophers get enough food</li>
+                        <li>b. Preventing deadlock and avoiding resource contention</li>
+                        <li>c. Ensuring philosophers share their thoughts</li>
+                        <li>d. Maximizing the speed of philosophers' decision-making</li>
+                    </ol>
+                    4. Which synchronization mechanism is commonly used to solve the Dining Philosophers problem?
+                    <ol>
+                        <li>a. Mutex locks</li>
+                        <li>b. Semaphores</li>
+                        <li>c. Spinlocks</li>
+                        <li>d. Both a and b</li>
+                    </ol>
+                    5. What is the purpose of using a semaphore or mutex lock in the Dining Philosophers solution?
+                    <ol>
+                        <li>a. To increase the speed of philosophers' decision-making</li>
+                        <li>b. To prevent philosophers from eating concurrently and avoid conflicts</li>
+                        <li>c. To allow philosophers to access shared resources simultaneously</li>
+                        <li>d. To limit the number of thoughts a philosopher can have at a time</li>
+                    </ol>
+                </p>
+                <br><br><br>
+                <p>
+                    Answer: <br>1 : b <br>
+                            2 : c <br>
+                            3 : b <br>
+                            4 : d <br>
+                            5 : b <br>
+                </p>
             </div>
         </section>
 
         <section id="concept">
-            <h2>Concept:</h2>
+            <h2>Concept:</h2> 
             <div class="project">
-                <h3>Title</h3>
                 <br>
-                <p>text</p>
-                <br>
-                <video width="320" height="240" controls autoplay muted loop>
+                <video width="1920" height="1080" controls autoplay muted loop id="original-video">
                     <source src="normal.mp4" type="video/mp4">
-                <br>
-                </video>
-                <video width="320" height="240" controls autoplay muted loop>
-                    <source src="deadlock.mp4" type="video/mp4">
-                    <br>
-                </video>
-                <video width="320" height="240" controls autoplay muted loop>
-                    <source src="deadlock_sol.mp4" type="video/mp4">
-                    <br>
-                </video>
+                </video><br><br><br><br><br><br><br><br><br><br><br>
+                <h3>Ideal solution of Dining Philosopers Problem</h3>
+                <p>From the above video we can understand that once a philosopher is eating, the philosopher adjacent to him will not be able to eat. 
+                    However, the philosopher after that will be able to eat as he does not have any fork in common with the philosopher eating. 
+                 Once they both finish eating, the philosopher in the middle will be able to eat. This is very important in operating system for 
+                resource location at a particular time instant. <br><br></p>
             </div>
         </section>
 
         <section id="demo">
-            <h2>Demo:</h2>
+            <h2>Demo of a deadlock:</h2>
             <div class="project">
+                
+                <video width="1920" height="1080" controls autoplay muted loop id="deadlock">
+                    <source src="deadlock.mp4" type="video/mp4">
+                </video>
+                <h2>One of the possible deadlocks</h2>
+                <p>In the video, it is observed that each philosopher attempts to acquire one fork simultaneously. 
+                    This leads to a situation where no philosopher obtains both forks, preventing anyone from enjoying 
+                    their meal. To address this issue, a solution is proposed in the video. <br></p>
                 <br>
-                <p>Demo:</p>
-                <br>
-                <h3>Title<h3>
+                
+                <video width="1920" height="1080" controls autoplay muted loop id="sol-to-deadlock">
+                    <source src="deadlock_sol.mp4" type="video/mp4">
+                    <br>
+                </video>
+                <h2>Solution to the deadlock</h2>
+                <p> In the improved scenario, Philosopher 1 takes fork 1, but instead of Philosopher 2
+                    also reaching for fork 2, they take fork 3. With fork 2 left unclaimed, Philosopher 1
+                     can now pick up fork 2 and begin enjoying their food. Once finished, fork 2 
+                     is then passed to Philosopher 2. Consequently, Philosopher 2 
+                     now possesses both forks and can commence their meal. This strategy of having 
+                     one philosopher choose the opposite side of the fork helps avoid a situation where 
+                     everyone competes for a single fork. <br></p>
             </div>
         </section>
 
         <section id="practice">
             <h2>Practice:</h2>
             <div class="project">
-                <br>
-                <p>text</p>
-                <br>
                 <h3>Title</h3>
             </div>
         </section>
@@ -120,12 +210,68 @@
             <h2>Post Quiz:</h2>
             <div class="project">
                 <br>
-                <p>text</p>
-                <br>
-                <h3>Title</h3>
+                <p>1. In the Dining Philosophers problem, what represents the resources that philosophers need to access? <br>
+                    <ol>
+                        <li>a. Forks</li>
+                        <li>b. Knives</li>
+                        <li>c. Plates</li>
+                        <li>d. Spoons</li>
+                    </ol>
+                    2. How does the concept of "circular wait" contribute to the possibility of deadlock in the Dining Philosophers problem?
+                    <ol>
+                        <li>a. Philosophers always wait for resources in a circular order, leading to a deadlock.</li>
+                        <li>b. Philosophers wait for resources in a non-circular order, preventing deadlock.</li>
+                        <li>c. Philosophers release resources in a circular order, preventing deadlock.</li>
+                        <li>d. Philosophers never wait for resources, avoiding the issue of deadlock.</li>
+                    </ol>
+
+                    3. What is a potential issue in the Dining Philosophers problem that can arise without proper synchronization, leading to a state where philosophers are unable to make progress?
+                    <ol>
+                        <li>a. Overlapping dining preferences</li>
+                        <li>b. Starvation</li>
+                        <li>c. Saturation</li>
+                        <li>d. Deadlock</li>
+                    </ol>
+                    4. What is deadlock in the context of the Dining Philosophers problem?
+                    <ol>
+                        <li>a. A situation where philosophers eat too quickly, causing a bottleneck.</li>
+                        <li>b. A state where philosophers are stuck and unable to proceed, waiting for a resource held by another.</li>
+                        <li>c. An efficient state where philosophers synchronize perfectly.</li>
+                        <li>d. A condition where philosophers ignore synchronization and eat independently.</li>
+                    </ol>
+                    5. In the Dining Philosophers problem, if each philosopher picks up the left fork first and then the right fork, what potential issue may arise?
+                    <ol>
+                        <li>a. Starvation</li>
+                        <li>b. Deadlock</li>
+                        <li>c. Overhead</li>
+                        <li>d. Oversynchronization</li>
+                    </ol>
+                </p>
+                <br><br><br>
+                <p>
+                    Answer: <br>1 : a <br>
+                            2 : a <br>
+                            3 : d <br>
+                            4 : b <br>
+                            5 : b <br>
+                </p>
             </div>
         </section>
     </main>
+    <script>
+        // Pause the videos when they are loaded
+        document.getElementById("original-video").addEventListener("loadedmetadata", function() {
+            this.pause();
+        });
+    
+        document.getElementById("deadlock").addEventListener("loadedmetadata", function() {
+            this.pause();
+        });
+
+        document.getElementById("sol-to-deadlock").addEventListener("loadedmetadata", function() {
+            this.pause();
+        });
+    </script>
     <script src="script.js"></script>
 </body>
 </html>
