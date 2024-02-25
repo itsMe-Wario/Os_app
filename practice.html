@@ -6,7 +6,7 @@
     <title>Dining Philosophers - Practice</title>
     <link rel="stylesheet" href="styles2.css">
 </head>
-<body>
+<body onload="startSimulation()">
 
 <header>
     <div class="logo">
@@ -38,11 +38,62 @@
 </div>
 <div class="title"><h1>Practice:</h1></div>
 <div class="content">
-    <div class="container">
-        <b>Make JavaScript</b>
-        <p>Sad :S<br>
-        </p>
+    <b>Select the PNGs in the Correct Order of SJF to Win!</b>
+    <div class="game-container">
+        <div class="circle-container" id="circle-container">
+            <!-- Images will be added dynamically here -->
+        </div>
     </div>
+    <div id="result"></div>
+
+    <table id="burst-time-table">
+        <thead>
+          <tr>
+            <th>Philosopher</th>
+            <th>Burst Time</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Table rows will be dynamically added here -->
+        </tbody>
+      </table>
+    
+      <div id="result-container" class="hidden">
+        <table id="philosophers-table">
+          <thead>
+            <tr>
+              <th>SJF Order</th>
+              <th>Burst Time</th>
+              <th>Philosopher</th>
+              <th>Waiting Time</th>
+              <th>Turnaround Time</th>
+              <th>Completion Time</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Table rows will be dynamically added here -->
+          </tbody>
+        </table>
+    
+        <table id="average-waiting-time-table">
+          <thead>
+            <tr>
+              <th>Average Waiting Time</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td id="average-waiting-time"></td>
+            </tr>
+          </tbody>
+        </table>
+    
+        <button id="refresh-btn" onclick="refreshPage()">Refresh</button>
+      </div>
+    
+      <button id="show-answer-btn" class="hidden" onclick="showAnswer()">Show Answer</button>
+
+    <script src="script2.js"></script>
 </div>
 
 <div class="shadow-line"></div>
