@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dining Philosophers - Demo</title>
+    <link rel="stylesheet" href="styles2.css">
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        <a href="#">
+        <img src="srm_logo-removebg2.png" alt="Logo">
+    </a>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="simulations.html">Simulations</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<div class="sidebar">
+    <ul>
+        <li><a href="aim.html"><b>Aim</b></a></li>
+        <li><a href="overview.html"><b>Overview</b></a></li>
+        <li><a href="recap.html"><b>Recap</b></a></li>
+        <li><a href="pretest.html"><b>Pretest</b></a></li>
+        <li><a href="concept.html"><b>Concept</b></a></li>
+        <li><a href="demo.html"><b><div class="highlight">Demo</div></b></a></li>
+        <li><a href="practice.html"><b>Practice</b></a></li>
+        <li><a href="quiz.html"><b>Post Quiz</b></a></li>
+    </ul>
+</div>
+<div class="title">
+    <h1>Demo:</h1>
+</div>
+<div class="content">
+    <div class="container">
+        <b>Demo of a deadlock:</b><br><br>
+    </div>
+    <div class="video-container">
+        <video width="640" height="360" controls autoplay muted loop id="original-video">
+            <source src="deadlock.mp4" type="video/mp4" >
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    <div class="container">
+        <br>
+        In the video, it is observed that each philosopher attempts to acquire one fork simultaneously. 
+        This leads to a situation where no philosopher obtains both forks, preventing anyone from enjoying 
+        their meal. How would we address this issue ?<br><br>
+    </div>   
+    <div class="container">
+        <b>Solution to the deadlock</b><br><br><br>
+    </div>
+    <div class="video-container">
+        <video width="640" height="360" controls autoplay muted loop id="original-video">
+            <source src="deadlock_sol.mp4" type="video/mp4" >
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    <div class="container">
+        <br>
+        In the improved scenario, Philosopher 1 takes fork 1, but instead of Philosopher 2
+                    also reaching for fork 2, they take fork 3. With fork 2 left unclaimed, Philosopher 1
+                     can now pick up fork 2 and begin enjoying their food. Once finished, fork 2 
+                     is then passed to Philosopher 2. Consequently, Philosopher 2 
+                     now possesses both forks and can commence their meal. This strategy of having 
+                     one philosopher choose the opposite side of the fork helps avoid a situation where 
+                     everyone competes for a single fork.<br><br>
+    </div>    
+</div>
+<div class="shadow-line"></div>
+
+<div class="footer"></div> <!-- Footer -->
+</div>
+</body>
+</html>
