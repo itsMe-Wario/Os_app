@@ -6,7 +6,7 @@
     <title>Dining Philosophers - Demo</title>
     <link rel="stylesheet" href="styles2.css">
 </head>
-<body onload="startSimulation()">
+<body>
 
 <header>
     <div class="logo">
@@ -40,12 +40,26 @@
     <h1>Demo:</h1>
 </div>
 <div class="content">
-    
-    <div class="sub_heading">
-        <h2>Demo of Solutions to the deadlock:</h2><br><br><br>
+    <div class="container">
+        <b>Demo of a deadlock:</b><br><br>
+    </div>
+    <div class="video-container">
+        <video width="640" height="360" controls autoplay muted loop id="original-video">
+            <source src="deadlock.mp4" type="video/mp4" >
+            Your browser does not support the video tag.
+        </video>
     </div>
     <div class="container">
-        <b>1.Resource Hierarchy Solution:</b><br>(Odd-Even Method)<br><br>
+        <br>
+        Deadlock occurs when all philosophers transition from thinking state to eating state simultaneously hece each acquire one fork. 
+        This leads to a situation where no philosopher obtains both forks, preventing anyone from eating. 
+        Now lets discuss how would we can address this.<br><br><br>
+    </div>   
+    <div class="sub_heading">
+        <h2>Solutions to the deadlock:</h2><br><br><br>
+    </div>
+    <div class="container">
+        <b>Resource Hierarchy Solution:</b><br>(Odd-Even Method)<br><br>
     </div>
     <div class="video-container">
         <video width="640" height="360" controls autoplay muted loop id="original-video">
@@ -77,65 +91,6 @@
          Before a philosopher picks up a chopstick, they must acquire the corresponding semaphore (using wait). If the semaphore is not available, 
          they wait until it becomes available. Once they finish using the chopstick, they release it (using signal).<br><br>
     </div> 
-
-    <div class="container">
-        <b>3. Solution to the Deadlock with SJF Algorithm:</b><br><br><br>
-    </div>
-    <div class="container">
-        <br> We can assign each philosopher a priority based on their time spent eating(Burts Time). Philosophers with the shortest eating time are 
-        given higher priority, allowing them to access the forks first. This approach minimizes the wait time for philosophers, 
-        reducing the likelihood of deadlock or starvation. By prioritizing those who have shortest time to to eat, SJF scheduling 
-        can help optimize the utilization of resources and ensure fair access to forks in the dining philosopher problem.<br><br>
-    </div> 
-
-    <table id="burst-time-table">
-        <thead>
-          <tr>
-            <th>Philosopher</th>
-            <th>Burst Time</th>
-          </tr>
-        </thead>
-        <tbody>
-          <!-- Table rows will be dynamically added here -->
-        </tbody>
-      </table>
-    
-      <div id="result-container" class="hidden">
-        <table id="philosophers-table">
-          <thead>
-            <tr>
-              <th>SJF Order</th>
-              <th>Burst Time</th>
-              <th>Philosopher</th>
-              <th>Waiting Time</th>
-              <th>Turnaround Time</th>
-              <th>Completion Time</th>
-            </tr>
-          </thead>
-          <tbody>
-            <!-- Table rows will be dynamically added here -->
-          </tbody>
-        </table>
-    
-        <table id="average-waiting-time-table">
-          <thead>
-            <tr>
-              <th>Average Waiting Time</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td id="average-waiting-time"></td>
-            </tr>
-          </tbody>
-        </table>
-    
-        <button id="refresh-btn" onclick="refreshPage()">Refresh</button>
-      </div>
-    
-      <button id="show-answer-btn" class="hidden" onclick="showAnswer()">Show Answer</button>
-    
-      <script src="script.js"></script>
    
 </div>
 <div class="shadow-line"></div>
