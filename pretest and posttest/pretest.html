@@ -41,9 +41,9 @@
             <label for="difficulty-beginner">Beginner</label>
             <input type="checkbox" id="difficulty-beginner" name="difficulty" checked>
             <label for="difficulty-advanced">Advanced</label>
-            <input type="checkbox" id="difficulty-advanced" name="difficulty">
+            <input type="checkbox" id="difficulty-advanced" name="difficulty" checked>
         </div>
-        <div class="pretest-question1">
+        <div class="pretest-question1 pretest-beginner">
             <p>1. What is the Dining Philosophers problem?</p>
             <div class="answers">
                 <label for="answer-a1">
@@ -64,7 +64,7 @@
                 </label> <br>
             </div>
         </div>
-        <div class="pretest-question2">
+        <div class="pretest-question2 pretest-beginner">
             <p>2. How many philosophers and forks are typically involved in the classic Dining Philosophers problem?</p>
             <div class="answers">
               <label for="answer-a2">
@@ -85,7 +85,7 @@
               </label> <br>
             </div>
         </div>
-        <div class="pretest-question3">
+        <div class="pretest-question3 pretest-advanced">
             <p>3. What is the primary challenge in the Dining Philosophers problem?</p>
             <div class="answers">
               <label for="answer-a3">
@@ -106,7 +106,7 @@
               </label> <br>
             </div>
        </div>
-        <div class="pretest-question4">
+        <div class="pretest-question4 pretest-beginner">
             <p>4. Which synchronization mechanism is commonly used to solve the Dining Philosophers problem?</p>
             <div class="answers">
               <label for="answer-a4">
@@ -127,7 +127,7 @@
               </label> <br>
             </div>
         </div>
-        <div class="pretest-question5">
+        <div class="pretest-question5 pretest-advanced">
             <p>5. What is the purpose of using a semaphore or mutex lock in the Dining Philosophers solution?</p>
             <div class="answers">
               <label for="answer-a5">
@@ -147,11 +147,12 @@
                 d. To limit the number of thoughts a philosopher can have at a time
               </label> <br>
             </div>
-            <br><br>
-
+            
+        </div>
+        <br><br>
         <button type="button" id="submit-button">Submit Quiz</button>
         <div id="result-container"></div>
-    </div>
+    
     <script src="pretest.js"></script>
 </body>
 </html>
