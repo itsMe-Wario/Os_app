@@ -82,6 +82,12 @@ nav ul li a {
     max-height: calc(420px); /* Set maximum height for content (viewport height - footer height) */
 }
 
+.sub-heading{
+    margin-left: 220px; 
+    padding: 20px;
+    padding-top: 15px;
+}
+
 .container {
     display: flex; /* Use flexbox layout */
     justify-content: center; /* Center horizontally */
