@@ -71,7 +71,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 });
 
-function startSimulation() {
+function startSimulation2() {
   const burstTimeTableBody = document.querySelector('#burst-time-table tbody');
   burstTimeTableBody.innerHTML = '';
   

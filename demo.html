@@ -6,7 +6,7 @@
     <title>Dining Philosophers - Demo</title>
     <link rel="stylesheet" href="styles2.css">
 </head>
-<body onload="startSimulation()">
+<body  onload="startSimulation2()">
 
 <header>
     <div class="logo">
@@ -36,11 +36,8 @@
         <li><a href="quiz.html"><b>Post Quiz</b></a></li>
     </ul>
 </div>
-<div class="title">
-    <h1>Demo:</h1>
-</div>
+<div class="title"><h1>Demo:</h1></div>
 <div class="content">
-    
     <div class="sub_heading">
         <h2>Demo of Solutions to the deadlock:</h2><br><br><br>
     </div>
@@ -64,25 +61,27 @@
         allowing the other Philosopher to continue eating.<br><br>
     </div>    
     <div class="container">
-        <b>2. Solution to the Deadlock with Semaphores</b><br><br><br>
-    </div>
- 
-  <div class="container">
+        <b>2. Solution to the Deadlock with implementation of SJF Algorithm:</b><br><br><br>
+      </div>
+      <div class="container">
       <br> We can assign each philosopher a priority based on their time spent eating(Burts Time). Philosophers with the shortest eating time are 
       given higher priority, allowing them to access the forks first. This approach minimizes the wait time for philosophers, 
       reducing the likelihood of deadlock or starvation. By prioritizing those who have shortest time to to eat, SJF scheduling 
       can help optimize the utilization of resources and ensure fair access to forks in the dining philosopher problem.<br><br>
-  </div> 
-
-    <b>Select the PNGs in the Correct Order of SJF to Win!</b>
-    <div class="game-container">
-        <div class="circle-container" id="circle-container">
-            <!-- Images will be added dynamically here -->
-        </div>
     </div>
-    <div id="result"></div>
+    <div class="container">
+    <b>Select the PNGs in the Correct Order of SJF to Win!</b>
+    </div>
 
-  <table id="burst-time-table">
+    <script src="script2.js"></script>
+    <div class="game-container">
+      <div class="circle-container" id="circle-container">
+          <!-- Images will be added dynamically here -->
+      </div>
+   </div>
+   <div id="result"></div>
+
+   <table id="burst-time-table">
       <thead>
         <tr>
           <th>Philosopher</th>
@@ -93,6 +92,7 @@
         <!-- Table rows will be dynamically added here -->
       </tbody>
     </table>
+    <button id="show-answer-btn" onclick="showAnswer()">Show Answer</button>
   
     <div id="result-container" class="hidden">
       <table id="philosophers-table">
@@ -124,18 +124,87 @@
         </tbody>
       </table>
   
-      <button id="refresh-btn" onclick="refreshPage()">Restart</button>
-    </div>
+      <button id="refresh-btn" onclick="refreshPage()">Refresh</button>
+   </div>
   
-    <button id="show-answer-btn" class="hidden" onclick="showAnswer()">Start</button>
-  
-    <script src="script2.js"></script>  
-</div>
-   
-</div>
-<div class="shadow-line"></div>
 
-<div class="footer"></div> <!-- Footer -->
+
+
+
+  <link rel="stylesheet" href="styles1.css">
+  <div class="container">
+  <script src="script3.js"></script>
+  <b>3. Solution to the Deadlock with Semaphores</b><br><br><br>
+  </div>
+  <div id="circle" class="circle">
+  <div class="philosopher" id="philosopher1">
+      <img src="man_11.png" alt="Philosopher">
+      <div class="numbering" id="numbering1">1</div>
+  </div>
+  <div class="philosopher" id="philosopher2">
+      <img src="man_22.png" alt="Philosopher">
+      <div class="numbering" id="numbering2">2</div>
+  </div>
+  <div class="philosopher" id="philosopher3">
+      <img src="man_33.png" alt="Philosopher">
+      <div class="numbering" id="numbering3">3</div>
+  </div>
+  <div class="philosopher" id="philosopher4">
+      <img src="man_44.png" alt="Philosopher">
+      <div class="numbering" id="numbering4">4</div>
+  </div>
+  <div class="philosopher" id="philosopher5">
+      <img src="man_55.png" alt="Philosopher">
+      <div class="numbering" id="numbering5">5</div>
+  </div>
+  </div>
+  <div id="square" class="square">
+ <div class="spoon" id="spoon1">
+    <img src="spoon_bgremoved.png" alt="Spoon">
+    <div class="numberingspoon" id="numbering6">1</div>
+  </div>
+ <div class="spoon" id="spoon2">
+  <img src="spoon_bgremoved.png" alt="Spoon">
+  <div class="numberingspoon" id="numbering7">2</div>
+ </div>
+ <div class="spoon" id="spoon3">
+  <img src="spoon_bgremoved.png" alt="Spoon">
+  <div class="numberingspoon" id="numbering8">3</div>
+ </div>
+ <div class="spoon" id="spoon4">
+  <img src="spoon_bgremoved.png" alt="Spoon">
+  <div class="numberingspoon" id="numbering9">4</div>
+ </div>
+ <div class="spoon" id="spoon5">
+  <img src="spoon_bgremoved.png" alt="Spoon">
+  <div class="numberingspoon5" id="numbering1">5</div>
+ </div>
+ </div>
+ <button onclick="startSimulation()">Start</button>
+ <button onclick="stopSimulation()">Stop</button>
+ <div class="table">
+  <h2>Dining Philosophers Table</h2>
+  <table>
+      <thead>
+          <tr>
+              <th>Philosopher</th>
+              <th>Status</th>
+              <th>Spoon</th>
+              <th>Spoon Status</th>
+          </tr>
+      </thead>
+      <tbody id="tableBody"></tbody>
+  </table>
+ <div class="container">
+  <br>Semaphores can be used to solve the dining philosophers problem by representing the chopsticks as semaphores.
+   Before a philosopher picks up a chopstick, they must acquire the corresponding semaphore (using wait). If the semaphore is not available, 
+   they wait until it becomes available. Once they finish using the chopstick, they release it (using signal).<br><br>
+ </div> 
 </div>
+</div>
+ <div class="shadow-line"></div>
+
+  <div class="footer"></div> <!-- Footer -->
+
 </body>
 </html>

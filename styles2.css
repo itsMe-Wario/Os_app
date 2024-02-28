@@ -116,10 +116,10 @@ nav ul li a {
 .footer {
     width: 100%;
     height: 110px; /* Adjust height as needed */
-    background-color: #331A53; /* Random color */
+    background-color: #331A53;
     position: fixed; /* Positioning */
     bottom: 0; /* Align to the bottom */
-    z-index: 1000; /* Ensure the footer stays above the sidebar */
+    z-index: 10009; /* Ensure the footer stays above the sidebar */
 }
 
 .title {
