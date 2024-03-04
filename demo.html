@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dining Philosophers - Demo</title>
-    <link rel="stylesheet" href="styles2.css">
+    <link rel="stylesheet" href="main_styles.css">
 </head>
-<body  onload="startSimulation2()">
+<body>
 
 <header>
     <div class="logo">
@@ -60,81 +60,9 @@
         4 reverting to the thinking stage while Philosopher 5 can eat since he has obtained both Forks. Upon finishing his meal, he returns the Fork, 
         allowing the other Philosopher to continue eating.<br><br>
     </div>    
-    <div class="container">
-        <b>2. Solution to the Deadlock with implementation of SJF Algorithm:</b><br><br><br>
-      </div>
-      <div class="container">
-      <br> We can assign each philosopher a priority based on their time spent eating(Burts Time). Philosophers with the shortest eating time are 
-      given higher priority, allowing them to access the forks first. This approach minimizes the wait time for philosophers, 
-      reducing the likelihood of deadlock or starvation. By prioritizing those who have shortest time to to eat, SJF scheduling 
-      can help optimize the utilization of resources and ensure fair access to forks in the dining philosopher problem.<br><br>
-    </div>
-    <div class="container">
-    <b>Select the PNGs in the Correct Order of SJF to Win!</b>
-    </div>
-
-    <script src="script2.js"></script>
-    <div class="game-container">
-      <div class="circle-container" id="circle-container">
-          <!-- Images will be added dynamically here -->
-      </div>
-   </div>
-   <div id="result"></div>
-
-   <table id="burst-time-table">
-      <thead>
-        <tr>
-          <th>Philosopher</th>
-          <th>Burst Time</th>
-        </tr>
-      </thead>
-      <tbody>
-        <!-- Table rows will be dynamically added here -->
-      </tbody>
-    </table>
-    <button id="show-answer-btn" onclick="showAnswer()">Show Answer</button>
-  
-    <div id="result-container" class="hidden">
-      <table id="philosophers-table">
-        <thead>
-          <tr>
-            <th>SJF Order</th>
-            <th>Burst Time</th>
-            <th>Philosopher</th>
-            <th>Waiting Time</th>
-            <th>Turnaround Time</th>
-            <th>Completion Time</th>
-          </tr>
-        </thead>
-        <tbody>
-          <!-- Table rows will be dynamically added here -->
-        </tbody>
-      </table>
-  
-      <table id="average-waiting-time-table">
-        <thead>
-          <tr>
-            <th>Average Waiting Time</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td id="average-waiting-time"></td>
-          </tr>
-        </tbody>
-      </table>
-  
-      <button id="refresh-btn" onclick="refreshPage()">Refresh</button>
-   </div>
-  
-
-
-
-
-  <link rel="stylesheet" href="styles1.css">
+    <link rel="stylesheet" href="semaphore_demo.css">
   <div class="container">
-  <script src="script3.js"></script>
-  <b>3. Solution to the Deadlock with Semaphores</b><br><br><br>
+  <b>2. Solution to the Deadlock with Semaphores</b><br><br><br>
   </div>
   <div id="circle" class="circle">
   <div class="philosopher" id="philosopher1">
@@ -200,6 +128,7 @@
    Before a philosopher picks up a chopstick, they must acquire the corresponding semaphore (using wait). If the semaphore is not available, 
    they wait until it becomes available. Once they finish using the chopstick, they release it (using signal).<br><br>
  </div> 
+ <script src="semaphore_demo.js"></script>
 </div>
 </div>
  <div class="shadow-line"></div>

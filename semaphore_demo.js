@@ -14,7 +14,7 @@ let semaphores = [1, 1, 1, 1, 1]; // 1 represents free spoon, 0 represents taken
         if (stopFlag) break;
         setTimeout(() => {
           testAndTakeForks(i) ;
-        }, Math.random() * 3000);
+        }, Math.random() * 1000);
       }
     }, 3000); // Adjust the interval as needed
   }
