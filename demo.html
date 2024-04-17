@@ -44,7 +44,7 @@
     <div class="container">
         <b>1.Resource Hierarchy Solution:</b><br>(Odd-Even Method)<br><br>
     </div>
-    <div class="video-container">
+    <div class="container">
         <video width="640" height="360" controls autoplay muted loop id="original-video">
             <source src="public/images/deadlock_sol.mp4" type="video/mp4" >
             Your browser does not support the video tag.
@@ -123,17 +123,16 @@
       </thead>
       <tbody id="tableBody"></tbody>
   </table>
+</div>
  <div class="container">
   <br>Semaphores can be used to solve the dining philosophers problem by representing the chopsticks as semaphores.
    Before a philosopher picks up a chopstick, they must acquire the corresponding semaphore (using wait). If the semaphore is not available, 
    they wait until it becomes available. Once they finish using the chopstick, they release it (using signal).<br><br>
  </div> 
- <script src="scripts/semaphore_demo.js"></script>
 </div>
-</div>
- <div class="shadow-line"></div>
-
-  <div class="footer"></div> <!-- Footer -->
-
+<div class="container"></div>
+<div class="shadow-line"></div>
+<div class="footer"></div>
+<script src="scripts/semaphore_demo.js"></script>
 </body>
 </html>

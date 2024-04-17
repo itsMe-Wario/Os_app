@@ -80,15 +80,10 @@ nav ul li a {
     margin-left: 220px; /* Adjust margin-left to match sidebar width */
     padding: 20px;
     padding-top: 15px; /* Ensure content starts below header */
+    padding-bottom: 10%;
     text-align: left; /* Center text inside the content */
     overflow-y: auto; /* Enable vertical scrollbar when content overflows */
-    max-height: calc(420px); /* Set maximum height for content (viewport height - footer height) */
-}
-
-.sub-heading{
-    margin-left: 220px; 
-    padding: 20px;
-    padding-top: 15px;
+    min-height: 100%;
 }
 
 .container {
@@ -97,10 +92,10 @@ nav ul li a {
     align-items: center; /* Center vertically */
 }
 
-.video-container {
-    display: flex; /* Use flexbox layout */
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
+.sub-heading{
+    margin-left: 220px; 
+    padding: 20px;
+    padding-top: 15px;
 }
 
 .shadow-line {
@@ -164,20 +159,6 @@ table {
   .png-image.selected {
     border: 2px solid green;
   }
-
-  .dpp-pretest {
-    max-width: 700px;
-    margin-left: 300px;
-    padding-right: 260px;
-    z-index: 10;
-}
-
-.dpp-posttest {
-    max-width: 700px;
-    margin-left: 300px;
-    padding-right: 260px;
-    z-index: 10;
-}
 
 .difficulty {
     margin-left: 90px;
